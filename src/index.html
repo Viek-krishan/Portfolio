@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="/src/index.css" />
+
+    <!-- <link rel="stylesheet" href="contact.css"> -->
+  </head>
+  <body>
+    <div id="root">
+      <h1>Not rendered</h1>
+    </div>
+
+    <script type="module" src="/src/app.js"></script>
+    <script>
+      let cards = document.querySelector(".MyCard");
+      cards.forEach((card) => {
+        card.mousemove = function (e) {
+          let x = e.pageX - card.offsetLeft;
+          let y = e.pageY - card.offsetTop;
+
+          card.style.setProperty("--x", x + "px");
+          card.style.setProperty("--y", y + "px");
+        };
+      });
+    </script>
+  </body>
+</html>
