@@ -1,5 +1,5 @@
 import { useState } from "react";
-import Images from "./Images";
+import { Images } from "./Images";
 import Crousal from "./crousal";
 
 const Projects = () => {
@@ -24,10 +24,9 @@ const Projects = () => {
         </h5>
       </div>
       <div className="Project-list flex flex-col items-center ">
-
         {/*------------------------ Project 1 -------------------------- */}
         {activePage === "project1" ? (
-          <div className="project-1 w-3/5 h-fit mt-12  flex flex-col justify-around items-center ">
+          <div className="project-1 w-4/5 h-fit mt-12  flex flex-col justify-around items-center ">
             <div className="m-5">
               <h1 className="text-2xl font-Philosopher">
                 Food Ordering Web App
@@ -48,9 +47,9 @@ const Projects = () => {
               </div>
             </div>
             <div className="Details w-full h-96 flex justify-around ">
-              <section className="imgSection w-2/5 ">
-                <div className="img w-full h-full bg-gray-500">
-                  <Crousal data={Images.Swiggy} />
+              <section className="imgSection w-3/5 m-5 ">
+                <div className="img w-full h-full bg-center  rounded-lg">
+                  <Crousal imgArray={Images[0]?.FoodService} />
                 </div>
               </section>
               <section className="Descriptions w-3/6 overflow-auto ">
@@ -151,7 +150,7 @@ const Projects = () => {
 
         {/*------------------------ Project 2 -------------------------- */}
         {activePage === "project2" ? (
-          <div className="project-2 w-3/5 h-fit mt-12  flex flex-col justify-around items-center ">
+          <div className="project-2 w-4/5 h-fit mt-12  flex flex-col justify-around items-center ">
             <div className="m-5">
               <h1 className="text-2xl font-Philosopher">YouTube Clone</h1>
               <div className="flex">
@@ -170,8 +169,10 @@ const Projects = () => {
               </div>
             </div>
             <div className="Details w-full h-96 flex justify-around ">
-              <section className="imgSection w-2/5 ">
-                <div className="img w-full h-full bg-gray-500"></div>
+              <section className="imgSection w-3/5 m-5 ">
+                <div className="img w-full h-full bg-center  rounded-lg">
+                  <Crousal imgArray={Images[0]?.YouTubeClone} />
+                </div>
               </section>
               <section className="Descriptions w-3/6 overflow-auto ">
                 <p className="break-after-all">
@@ -281,7 +282,7 @@ const Projects = () => {
 
         {/*------------------------ Project 3 -------------------------- */}
         {activePage === "project3" ? (
-          <div className="project-3 w-3/5 h-fit mt-12  flex flex-col justify-around items-center ">
+          <div className="project-3 w-4/5 h-fit mt-12  flex flex-col justify-around items-center ">
             <div className="m-5">
               <h1 className="text-2xl font-Philosopher">YouTube Backend</h1>
               <div className="flex">
@@ -303,8 +304,10 @@ const Projects = () => {
               </div>
             </div>
             <div className="Details w-full h-96 flex justify-around ">
-              <section className="imgSection w-2/5 ">
-                <div className="img w-full h-full bg-gray-500"></div>
+              <section className="imgSection w-3/5 m-5 ">
+                <div className="img w-full h-full bg-center  rounded-lg">
+                  <Crousal imgArray={Images[0]?.YouTubeBackend} />
+                </div>
               </section>
               <section className="Descriptions w-3/6 overflow-auto ">
                 <p className="break-after-all">
@@ -420,7 +423,7 @@ const Projects = () => {
 
         {/*------------------------ Project 4 -------------------------- */}
         {activePage === "project4" ? (
-          <div className="project-3 w-3/5 h-fit mt-12  flex flex-col justify-around items-center ">
+          <div className="project-3 w-4/5 h-fit mt-12  flex flex-col justify-around items-center ">
             <div className="m-5">
               <h1 className="text-2xl font-Philosopher">My Portfolio</h1>
               <div className="flex">
@@ -436,9 +439,6 @@ const Projects = () => {
               </div>
             </div>
             <div className="Details w-full h-96 flex justify-around ">
-              <section className="imgSection w-2/5 ">
-                <div className="img w-full h-full bg-gray-500"></div>
-              </section>
               <section className="Descriptions w-3/6 overflow-auto ">
                 <p className="break-after-all">
                   Welcome to my portfolio! I'm a skilled web developer
@@ -514,7 +514,6 @@ const Projects = () => {
             </div>
           </div>
         )}
-        
       </div>
     </div>
   );
